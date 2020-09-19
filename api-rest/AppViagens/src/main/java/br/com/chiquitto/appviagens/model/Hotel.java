@@ -17,6 +17,15 @@ public class Hotel {
 
     private String nome;
     private String endereco;
+    private String cidade;
+
+    public String getCidade() {
+        return cidade;
+    }
+
+    public void setCidade(String cidade) {
+        this.cidade = cidade;
+    }
 
     public Integer getId() {
         return id;
