@@ -1,26 +1,28 @@
 package br.com.chiquitto.appviagens.model;
 
+import org.springframework.hateoas.RepresentationModel;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 
 @Entity
-public class Quarto {
+public class Quarto extends RepresentationModel {
 
     @Id
     @GeneratedValue
-    private Integer id;
+    private Integer idQuarto;
     private String tipo;
     @ManyToOne
     private Hotel hotel;
 
-    public Integer getId() {
-        return id;
+    public Integer getIdQuarto() {
+        return idQuarto;
     }
 
-    public void setId(Integer id) {
-        this.id = id;
+    public void setIdQuarto(Integer id) {
+        this.idQuarto = id;
     }
 
     public String getTipo() {

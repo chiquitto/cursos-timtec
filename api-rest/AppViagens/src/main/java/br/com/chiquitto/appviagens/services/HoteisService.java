@@ -25,8 +25,8 @@ public class HoteisService {
 
         List<Hotel> hoteis = hotelRepository.findByCidade(cidade);
         for (Hotel hotel : hoteis) {
-            hotel.add(Link.valueOf("</quartos/1>; title=\"Quarto basico 1\"; rel=\"quarto\""));
-            hotel.add(Link.valueOf("</quartos/2>; title=\"Quarto luxo 1\"; rel=\"quarto\""));
+            hotel.add(Link.valueOf("</services/quartos/1>; title=\"Quarto basico 1\"; rel=\"quarto\""));
+            hotel.add(Link.valueOf("</services/quartos/2>; title=\"Quarto luxo 1\"; rel=\"quarto\""));
         }
 
         return hoteis;
