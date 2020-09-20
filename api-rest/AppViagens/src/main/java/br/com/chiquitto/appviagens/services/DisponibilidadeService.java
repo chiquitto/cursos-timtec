@@ -22,7 +22,7 @@ public class DisponibilidadeService {
 
 
         Hotel hotel = new Hotel();
-        hotel.setId(1);
+        hotel.setIdHotel(1);
         hotel.setNome("Caiua");
         hotel.setEndereco("Rua Central 12345");
 

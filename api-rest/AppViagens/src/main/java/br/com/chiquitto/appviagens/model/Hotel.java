@@ -1,5 +1,7 @@
 package br.com.chiquitto.appviagens.model;
 
+import org.springframework.hateoas.RepresentationModel;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -9,11 +11,11 @@ import javax.persistence.Id;
  * @author Alisson Chiquitto <chiquitto@gmail.com>
  */
 @Entity
-public class Hotel {
+public class Hotel extends RepresentationModel {
 
     @Id
     @GeneratedValue
-    private Integer id;
+    private Integer idHotel;
 
     private String nome;
     private String endereco;
@@ -27,12 +29,12 @@ public class Hotel {
         this.cidade = cidade;
     }
 
-    public Integer getId() {
-        return id;
+    public Integer getIdHotel() {
+        return idHotel;
     }
 
-    public void setId(Integer id) {
-        this.id = id;
+    public void setIdHotel(Integer id) {
+        this.idHotel = id;
     }
 
     public String getNome() {
