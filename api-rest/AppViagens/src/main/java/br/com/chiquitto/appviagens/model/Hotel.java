@@ -5,6 +5,7 @@ import org.springframework.hateoas.RepresentationModel;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.Version;
 
 /**
  *
@@ -20,6 +21,17 @@ public class Hotel extends RepresentationModel {
     private String nome;
     private String endereco;
     private String cidade;
+
+    @Version
+    private Long version;
+
+    public Long getVersion() {
+        return version;
+    }
+
+    public void setVersion(Long version) {
+        this.version = version;
+    }
 
     public String getCidade() {
         return cidade;
